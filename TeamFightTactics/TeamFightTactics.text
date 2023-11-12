@@ -1,0 +1,48 @@
+Trong bài này, chúng ta sẽ mô phỏng game TFT (đấu trường chân lý), nếu chưa chơi game này bao giờ, hãy hỏi đứa bạn bên cạnh.
+
+Nhập vào thông tin của n tướng trên bàn cờ, thứ tự nhập vào chính là thứ tự thả tướng vào bàn cờ, 
+tính toán khả năng gây sát thương (= chỉ số tấn công) trong m lượt. 
+Mỗi tướng có thông tin sau: tên, tên tộc, tấn công và skill riêng, người dùng chỉ cần nhập chỉ số tấn công.
+
+Các tướng hệ Mật thám được tự động tăng 10 chỉ số tấn công khi đủ 2 loại tướng (nếu chỉ có 1 loại tướng thì không kích hệ):
+
+Shaco (1) – hệ Mật thám - Skill Đâm lén: Sát thương gây ra x 2 so với bình thường
+Zed (2) - hệ Mật thám – Skill Khinh thường kẻ yếu: sau mỗi 2 lượt, lượt 3 gây ra sát thương x 3.
+Khi có đủ 3 tướng cùng loại, tướng 1 sao sẽ được thăng cấp lên tướng 2 sao, 
+và tương tự 3 tướng 2 sao sẽ được thăng cấp lên tướng 3 sao (tối đa). 
+Tướng 2 sao x 2 tổng công của 3 tướng 1 sao, tướng 3 sao x 3 tổng công 3 tướng 2 sao.
+
+Áp dụng kiến thức lập trình hướng đối tượng để xây dựng chương trình thực hiện các yêu cầu sau:
+
+Nhập số lượng tướng n, số lượt m và thông tin n tướng.
+Xuất ra thông tin các tướng dưới định dạng sau:
+[Tên tướng] – [Sát thương gây ra]
+image
+
+image
+
+Input Format
+
+int int
+
+[int int]
+
+Constraints
+
+Không ràng buộc
+
+Output Format
+
+[string]
+
+Sample Input 0
+
+3 3
+1 20
+1 10
+2 30
+Sample Output 0
+
+Shaco - 180
+Shaco - 120
+Zed - 200

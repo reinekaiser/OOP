@@ -1,0 +1,35 @@
+Nhập số lượng chai n, sau đó nhập loại chai và thông tin tương ứng 
+(hình trụ tròn - 1 - chiều cao x bán kính đáy - lấy PI = 3.14, 
+hình hộp chữ nhật - 2 - chiều cao x chiều dài x chiều rộng, 
+hình lập phương - 3 - độ dài cạnh). 
+Chai hình trụ thì chỉ tính diện tích xung quanh trong khi đó hai chai còn lại tính diện tích toàn phần. 
+Xuất ra thông tin sau:
+
+Dien tich chai vo: [Diện tích]
+Luong nuoc tren mat dat: [Thể tích nước trên mặt đất]
+Input Format
+
+int
+
+[[int]]
+
+Constraints
+
+No constraint
+
+Output Format
+
+string
+
+string
+
+Sample Input 0
+
+3
+2 2 3 5
+3 4
+1 1 1
+Sample Output 0
+
+Dien tich chai vo: 164.28
+Luong nuoc tren mat dat: 9.714

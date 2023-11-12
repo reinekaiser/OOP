@@ -1,0 +1,50 @@
+Một nông trại nuôi bò, cừu, dê và thỏ. Mỗi loại đều có thể sinh con, cho sữa và kêu khi đói. Sau một thời gian,
+ hãy thống kê xem trong nông trại có bao nhiêu gia súc ở mỗi loại và tổng số lít sữa tương ứng. Biết:
+
+Bò (kêu Booo): 10 lít / lượt.
+Cừu (kêu Beee): 5 lít / lượt.
+Dê (kêu Eeee): 8 lít / lượt.
+Thỏ (không kêu): 0 lít / lượt.
+Cứ 2 con trưởng thành thì sinh ra 1 con mới / lượt, chỉ gia súc trưởng thành mới cung cấp sữa,
+ con mới sinh phải qua 3 lượt mới trưởng thành, riêng thỏ thì chỉ cần 1 lượt. Giả sử tất cả gia 
+ súc sau khi trưởng thành đều khỏe mạnh và bất tử, không có con nào bị chết non hoặc chết già.
+
+Cho phép người dùng nhập vào số lượng 4 loại gia súc trên 1 hàng. 
+Sau đó nhập số lượt n và thống kê tình hình trang trại sau n lượt.
+
+Bo: [số lượng],[số lít sữa]
+Cuu: [số lượng],[số lít sữa]
+De: [số lượng,[số lít sữa]
+Tho: [số lượng,[số lít sữa]
+Input Format
+
+int int int int
+
+int
+
+Constraints
+
+Không ràng buộc
+
+Output Format
+
+string
+
+Bo: int,int
+
+Cuu: int,int
+
+De: int,int
+
+Tho: int,int
+
+Sample Input 0
+
+4 2 4 5
+5
+Sample Output 0
+
+Bo: 15,220
+Cuu: 7,55
+De: 15,176
+Tho: 22,0

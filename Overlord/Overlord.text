@@ -1,0 +1,60 @@
+Overlord là một seri anime thể loại chuyển sinh, tại đây nhân vật chính là Momonga phiêu lưu vào thế giới thần thoại đầy rẫy quái vật. 
+Để làm nhiệm vụ nguy hiểm, như tiêu diệt boss, con người ở đây tạo ra Guild, một Guild sẽ bao gồm n thành viên thực 
+hiện chung một nhiệm vụ nào đó, mỗi thành viên có tên và các chỉ số HP, ATK và DEF.
+
+HP là chỉ số sinh mệnh, nếu HP <=0 thì coi như đã chết, không còn khả năng ATK.
+ATK là chỉ số tấn công, DEF là chỉ số phòng thủ, mỗi lượt đánh sẽ gây sát thương (tức là trừ vào HP của đối phương) 
+một lượng là (ATK bản thân – DEF đối phương), nếu DEF của đối phương cao hơn thì coi như sát thương là 0.
+Mỗi thành viên trong Guild có thể là:
+
+Nhân loại (có thêm thuộc tính job class): bao gồm Human (loại 1) và Elf (loại 2). Người không có khả năng gì thêm, còn Elf được + 50% DEF dựa trên DEF nhập vào.
+Bán nhân (có thêm thuộc tính racial class): bao gồm Orc (loại 3) và Golbin (loại 4). Orc được +50% HP dựa trên HP nhập vào, Golbin được + 10% ATK dựa trên ATK nhập vào.
+Dị hình: bao gồm Vampire (loại 5) và Devil (loại 6), Vampire được +10% HP / mỗi thành viên Guild là nhân loại, Devil được +10% ATK và +10% DEF / mỗi Devil trong Guild.
+Sau khi nhập các thông tin cho Guild, Giả sử Guild đi đánh Boss, hãy tính khả năng chiến thắng. 
+Biết rằng 2 bên sẽ đánh nhau theo lượt, và bên Guild sẽ tấn công trước còn Boss sẽ ưu tiên tấn công thành viên ít máu nhất.
+
+Input:
+
+[Số lượng]*
+[[loại] [tên] [HP] [ATK] [DEF] [Thông tin thêm]]
+[Tên boss] [HP] [ATK] [DEF]
+Output:
+
+Nếu chiến thắng, xuất ra danh sách các thành viên còn sống theo thứ tự HP thấp đến cao:
+
+[[Tên] [HP]]
+Nếu thua hoặc quá 100 lượt mà chưa có kết quả, xuất ra thông tin HP còn lại của Boss:
+
+[Tên boss] [HP]
+image
+
+Tham khảo lời giải tại: BHT CNPM
+
+Input Format
+
+int
+
+[int string float float float string]
+
+string float float float
+
+Constraints
+
+No constraint
+
+Output Format
+
+[string float]
+
+Sample Input 0
+
+3
+1
+Adam 100 10 10 NongDan
+2 Vi 200 10 10 CungThu
+6 Jacob 400 50 30
+Ainz 200 50 20
+Sample Output 0
+
+Vi 130
+Jacob 400

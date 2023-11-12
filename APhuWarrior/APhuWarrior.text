@@ -1,0 +1,72 @@
+Trong quá trình đi làm trừ nợ cho nhà quan thống lý. Ngày nào A Phủ cũng phải đốt rừng, cày nương,
+ cuốc nương, săn bò tót, bẫy hổ, chăn bò chăn ngựa, quanh năm một thân một mình rong ruổi ngoài gò rừng. 
+ Hãy tính toán khả năng A Phủ trở về nhà an toàn sau một ngày làm việc bằng cách nhập những thông tin vũ khí và thú dữ A Phủ gặp phải.
+
+Vũ khí có 3 loại: dao, cung tên và tay không.
+
+Dao (loại 1): chỉ số sát thương, số lượt sử dụng, chiều dài. Sát thương mỗi lượt sử dụng được tính bằng chỉ số sát thương * chiều dài. Số lượt sử dụng giảm 1 mỗi lần sử dụng.
+Cung tên (loại 2): chỉ số sát thương, số lượt sử dụng, số mũi tên. Sát thương mỗi lượt sử dụng được tính bằng chỉ số sát thương * số mũi tên / 2. Số lượt sử dụng giảm 2 mỗi lần sử dụng.
+Tay không: chỉ số sát thương, số lượt sử dụng vô tận. Sát thương mỗi lượt chính bằng chỉ số sát thương = 10% HP tối đa, tuy nhiên mỗi lần sử dụng sẽ tự giảm lượng HP bằng 10% HP tối đa. Tay không luôn là vũ khí được sử dụng sau cùng, không cần nhập.
+Thú dữ có 2 loại: bò tót và hổ:
+
+Bò tót (loại 1): chỉ số HP, chỉ số sát thương, số lần chịu đánh. Sát thương mỗi lượt bằng chỉ số sát thương. Chỉ bị hạ gục khi số lần chịu đánh về 0 hoặc HP <= 0.
+Hổ (loại 2): chỉ số HP, chỉ số sát thương. Sát thương mỗi lượt bằng 1.5 chỉ số sát thương. Bị hạ gục khi HP <= 0.
+B1: Nhập vào lượng HP tối đa của A Phủ hiện tại.
+
+B2: Nhập vào số lượng vũ khí mà A Phủ đem theo (n), mỗi vũ khí nhập trên một dòng, thứ tự nhập là:
+
+[loại] [chỉ số sát thương] [số lượt sử dụng] [chiều dài / số mũi tên]
+B3: Nhập vào số lượng thú dữ (m), mỗi thú dữ nhập trên một dòng, thứ tự nhập là:
+
+[loại [chỉ số HP] [chỉ số sát thương] [số lần chịu đánh nếu là bò tót]
+B4: Tính toán theo các bước, thứ tự sử dụng vũ khí và thú dữ xuất hiện theo đúng như thứ tự đã nhập.
+
+A Phủ sẽ tấn công thú dữ trước => vũ khí bị giảm số lượng sử dụng
+ (nếu vũ khí có số lần sử dụng <= 0 thì lượt tấn công tiếp theo sử dụng vũ khí tiếp theo) 
+ => A Phủ gây ra lượng sát thương lên thú dữ => Nếu thú dữ chưa chết, chúng gây ra một lượng sát thương 
+ ngược lại cho A Phủ, ngược lại thú dữ tiếp theo sẽ được xuất hiện ở lượt kế tiếp => A Phủ lại bắt đầu tấn công.
+
+B5: Xuất ra thông tin về kết quả ngày đi làm của A Phủ như sau:
+
+Nếu A Phủ tiêu diệt được tất cả thú rừng, xuất ra:
+
+A Phu chien thang, hp con lai: [hp còn lại], so luong vu khi con lai: [số lượng vũ khí còn lại, không tính tay không]
+Nếu HP của A Phủ thấp hơn hoặc bằng 0, xuất ra:
+
+A Phu that bai, so thu du con lai: [số lượng thú dữ còn lại]
+image
+
+Input Format
+
+float
+
+int
+
+[int float int float]
+
+int
+
+[int float float]
+
+Constraints
+
+No constraint
+
+Output Format
+
+String
+
+Sample Input 0
+
+30
+3
+1 5 2 1.1
+1 2 1 1.3
+2 3 3 4
+3
+1 100 3 5
+2 40 2
+1 50 5 3
+Sample Output 0
+
+A Phu that bai, so thu du con lai: 2

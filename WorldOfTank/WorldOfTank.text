@@ -1,0 +1,59 @@
+Hãy viết chương trình quản lý các loại xe tăng.
+
+Một xe tăng thì bao gồm khối lượng (weight), số lượng người trong kíp lái (num_crews) và thông tin về tháp pháo và động cơ.
+
+Tháp pháp có thông tin về kích thức nòng (size), số lượng đạn (num_ammos) và có 4 loại:
+
+ML20S (loại 1): size = 152mm, có sát thương bằng num_crews / 4 * size * num_ammos.
+F34 (loại 2): size = 76.2mm, có sát thương bằng 3 * size * num_ammos.
+D25T (loại 3): size = 122mm, giống F34.
+M65L (loại 4): size = 130mm, giống ML20S.
+Động cơ có thông tin về mã lực (hp), số lít xăng hiện có (lit) và có 3 loại:
+
+V2 (loại 1): hp = 500, động cơ này tiêu thụ 450 / khối lượng xe tăng (lít xăng) trên mỗi 100 km.
+V2K (loại 2): hp = 600, là phiên bản nâng cấp của V2.
+2DG8M (loại 3): hp = 1000, động cơ này tiêu thụ 400 / khối lượng xe tăng (lít xăng) trên mỗi 100 km.
+Có 4 loại xe tăng:
+
+SU152 (loại 1): sử dụng tháp pháo ML20S, động cơ V2K, hiệu suất được đo bằng tỉ lệ số đạn còn lại với số đạn ban đầu.
+KV2 (loại 2): sử dụng tháp pháo F34, động cơ V2, hiệu suất được đo giống SU152.
+IS (loại 3): sử dụng tháp pháo D25T, động cơ V2K, hiệu suất được đo bằng tỉ lệ số lit xăng còn lại với số lít xăng được cấp ban đầu.
+Object279 (loại 4): sử dụng tháp pháo M65L, động cơ 2DG8M, hiệu suất được đo bằng tỉ lệ số lượng kíp lái / 4.
+Hãy nhập số lượng xe tăng n, sau đó nhập thông tin mỗi xe tăng trên mỗi dòng, thông tin nhập bao gồm:
+
+[loại (1 - 4)] [khối lượng (tấn)] [số kíp lái] [số lượng đạn được cấp] [số lượng lít xăng được cấp]
+Sau đó, nhập vào số lượng km đã đi và số lượng đạn đã bắn, tính toán trừ vào các thông số của xe tăng và trả về thông tin của n xe tăng, mỗi xe tăng một dòng
+
+[Tên xe tăng], weight: [khối lượng], number of crews: [số kíp lái], damage: [sát thương có thể gây ra tại thời điểm hiện tại], performance: [hiệu suất hiện tại]%
+image
+
+Input Format
+
+int
+
+[int float int int float]
+
+float int
+
+Constraints
+
+Không
+
+Output Format
+
+[string]
+
+Sample Input 0
+
+4
+1 40 4 20 1000
+4 60 6 15 800
+2 50 3 40 2222
+3 30 2 10 2000
+300 10
+Sample Output 0
+
+SU152, weight: 40, number of crews: 4, damage: 1520, performance: 50%
+Object279, weight: 60, number of crews: 6, damage: 975, performance: 150%
+KV2, weight: 50, number of crews: 3, damage: 6858, performance: 75%
+IS, weight: 30, number of crews: 2, damage: 0, performance: 97.75%

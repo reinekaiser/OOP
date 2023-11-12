@@ -1,0 +1,59 @@
+Đề thi thực hành OOP lớp thầy Toàn a.k.a Toàn sát thủ luôn làm các thế hệ sinh viên rùng mình khi nhắc tới, 
+dưới đây là đề thi của một năm nào đó, các em hãy thử sức với đề thi này để chúng ta chuẩn bị tâm lý trước khi lên thớt.
+
+Tại một công ty chuyên sản xuất các loại smartphone. Mỗi chiếc smartphone sẽ có các thông tin chính về mã smartphone, 
+dòng smartphone , giá bán, vỏ smartphone, 1 CPU, 1 màn hình.
+
+Mỗi CPU sẽ có thông tin về mã CPU, loại CPU, hãng, số core, xung nhịp, giá nhập. CPU phân thành 3 loại: loại Alpha, Beta, Gamma.
+
+Alpha (1) có giá nhập vào 200 – số core là 2 – xung nhịp 1.8 GHz – nhập từ hãng Black.
+Beta (2) có giá nhập là 400 – số core 4 – xung nhịp 2.46 GHz – nhập từ hãng Black.
+Gamma (3) thì có loại 4 core – xung nhịp 2.6 GHz - nhập từ hãng White – giá nhập là 600.
+Màn hình sẽ có thông tin về mã màn hình, hãng sản xuất, độ phân giải (HD hoặc FullHD), giá nhập, kích thước. 
+Hiện tại, công ty chỉ phân phối smartphone có kích thước màn hình là 4.7 inch. 
+Dựa vào độ phân giải công ty phần màn hình thành màn hình HD và FullHD.
+
+Màn hình HD (1) luôn có giá 200.
+Màn hình FullHD (2) sẽ có thêm thông tin để xác định đây là loại màn hình FullHD có tính chống lóa (Chong_loa = 1) hay không (= 0). 
+FullHD chống lóa có giá 500, FullHD không có chống lóa là 300.
+Vỏ smartphone sẽ có thông tin về mã vỏ, loại vỏ, hãng, giá nhập, màu sắc. Vỏ smartphone sẽ có 2 loại vỏ: vỏ nhôm và vỏ nhựa.
+
+Vỏ nhôm (Nhom - 1) thì giá nhập là 400 - nhập từ hãng Black – có 2 màu: đỏ (Do) và đen (Den).
+Vỏ nhựa (Nhua - 2) thì giá nhập là 200 - nhập từ hãng White - có 3 loại màu: đỏ (Do), đen (Den), xanh (Xanh).
+Công ty này có lắp ráp các dòng smartphone chính là Venus, Mars, Jupiter. 
+Ở dòng Venus thì luôn sử dụng CPU loại Alpha hoặc loại Beta. 
+Còn dòng Mars thì sử dụng 1 trong 3 loại CPU (Alpha, Beta, Gamma) và màn hình luôn là loại FullHD và luôn là vỏ nhôm. 
+Dòng Jupiter luôn dùng CPU Gamma, màn hình FullHD chống lóa và vỏ nhôm.
+
+Biết rằng giá bán ra của một smartphone sẽ được tính theo công thức:
+
+Venus (1): X * 1.3
+Mars (2): X * 1.5
+Jupiter (3): X * 1.8
+Trong đó X: là tổng giá nhập vào của các bộ phận thành phần cấu thành nên smartphone đó (giá của vỏ + giá của cpu + giá của màn hình).
+
+Viết chương trình hỗ trợ công ty quản lý các sản phẩm của họ: 
+(Các yếu tố đánh giá: chương trình chạy, áp dụng tốt tư tưởng lập trình hướng đối tượng và sử dụng được kỹ thuật kế thừa, 
+đa hình, nạp chồng toán tử...).
+
+Nhập và xuất danh sách N smartphone
+
+Sample Input 0
+
+1
+1
+ROG2020
+1
+CPUAzen
+IntelG
+Intel
+1
+1
+Titan
+1
+Sample Output 0
+
+Smartphone: ROG2020 Venus 1040
+CPU: CPUAzen Alpha Black 2 1.8 200
+Man hinh: IntelG Intel HD 200
+Vo smartphone: Titan Nhom Black Do 400
